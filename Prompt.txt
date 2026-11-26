@@ -1,0 +1,342 @@
+﻿Website Development Master Prompt – SiteBanao
+Act as a Senior UI/UX Designer, Brand Strategist, Full-Stack Developer and Software Architect with 15+ years of experience building premium digital products, SaaS platforms and high-converting business websites.
+Your task is to design and develop a complete, modern, responsive and production-ready website for a startup named SiteBanao.
+Do not create an ordinary freelancer portfolio website. Build a premium-looking website development brand that sells affordable professional websites to individuals, small businesses, startups and local businesses.
+1. BRAND IDENTITY
+Brand Name: SiteBanao
+Primary Tagline: Your Website. Just ₹999.
+Alternative Tagline: Your Business Deserves to Be Online.
+Business Model:
+SiteBanao provides affordable website design and development services, starting at ₹999.
+Our target customers include:
+   * Small business owners
+   * Restaurants and cafes
+   * Clinics and healthcare professionals
+   * Salons and spas
+   * Real estate businesses
+   * Coaching institutes
+   * Freelancers
+   * Consultants
+   * Startups
+   * Local shops
+   * Personal brands
+Primary Market: India initially, with the ability to serve international customers later.
+Brand Personality:
+   * Modern
+   * Professional
+   * Trustworthy
+   * Affordable
+   * Technology-driven
+   * Approachable
+   * Transparent
+The brand should communicate affordability without looking cheap or compromising its professional appearance.
+2. DESIGN DIRECTION
+Create a premium SaaS-inspired website.
+Take visual inspiration from the design quality, spacing, typography and interactions of:
+   * Stripe
+   * Linear
+   * Framer
+   * Webflow
+   * Vercel
+   * Modern digital agencies
+Do not directly copy any existing website.
+Color Palette
+   * Primary background: #FFFFFF
+   * Secondary background: #F8FAFC
+   * Primary text: #101828
+   * Secondary text: #667085
+   * Primary brand color: #635BFF
+   * Accent color: #12B76A
+   * Border color: #EAECF0
+Typography
+Use modern typography such as Inter, Manrope or Plus Jakarta Sans.
+Visual Requirements
+   * Premium layouts
+   * Spacious sections
+   * Clean typography
+   * Subtle gradients
+   * Smooth hover effects
+   * Modern cards
+   * Rounded corners
+   * Elegant animations
+   * Consistent spacing
+   * Professional illustrations and website mockups
+   * Excellent mobile experience
+Avoid excessive gradients, unnecessary animations, cluttered layouts and generic AI-generated design patterns.
+3. WEBSITE STRUCTURE
+Create the following pages and sections.
+A. Homepage
+Navigation Bar
+Include:
+   * SiteBanao logo
+   * Home
+   * Services
+   * Pricing
+   * Portfolio
+   * How It Works
+   * About Us
+   * Contact
+   * Get Started CTA
+Make the navigation sticky and responsive.
+Hero Section
+Main heading:
+"Your Business Deserves to Be Online."
+Supporting highlighted heading:
+"Professional Websites Starting at Just ₹999."
+Description:
+"We build beautiful, mobile-friendly and professional websites that help businesses establish their online presence without expensive development costs."
+CTA buttons:
+   * Get Your Website
+   * Explore Our Designs
+Add trust indicators:
+   * Affordable Website Development
+   * Mobile-Friendly Designs
+   * Transparent Pricing
+   * Domain & Hosting Separately Quoted
+Show a premium visual composition featuring responsive website mockups on desktop, tablet and mobile devices.
+Industries Section
+Heading: "Websites for Every Kind of Business"
+Create visually attractive cards for:
+   1. Restaurants & Cafes
+   2. Clinics & Doctors
+   3. Real Estate
+   4. Salons & Spas
+   5. Coaching Institutes
+   6. Freelancers & Portfolios
+   7. Small Businesses
+   8. Startups & Companies
+Each card should have a relevant visual, short description and View Designs option.
+Why Choose SiteBanao?
+Highlight:
+   * Affordable Pricing
+   * Professional Designs
+   * Mobile Responsive Websites
+   * Fast Development
+   * Transparent Quotations
+   * Customer Support
+   * Easy Ordering Process
+How It Works
+Display a five-step process:
+   1. Choose Your Package
+   2. Share Your Requirements
+   3. We Develop Your Website
+   4. Review and Approve
+   5. Launch Your Website
+Use a modern step-by-step visual timeline.
+Featured Portfolio
+Display sample website designs for different industries.
+Each portfolio card must contain:
+   * Preview image or mockup
+   * Industry name
+   * Short description
+   * View Live Demo button
+   * Get This Website button
+Use clearly labelled demonstration projects. Do not fabricate real clients, testimonials or completed customer projects.
+Pricing Section
+Create three professional pricing cards.
+STARTER – ₹999
+   * One-page website
+   * Mobile-responsive design
+   * Business information
+   * Contact details
+   * WhatsApp button
+   * Basic SEO setup
+   * One revision
+BUSINESS – ₹2,999
+   * Up to 5 pages
+   * Professional website design
+   * About Us page
+   * Services page
+   * Contact page
+   * WhatsApp integration
+   * Contact form
+   * Basic SEO setup
+   * Two revisions
+PROFESSIONAL – ₹5,999
+   * Up to 8 pages
+   * Premium UI/UX
+   * Advanced contact forms
+   * Gallery
+   * Testimonials section
+   * Google Maps integration
+   * SEO-friendly structure
+   * Three revisions
+Make the Business package visually prominent as the recommended package.
+IMPORTANT:
+All package prices represent one-time website development charges only.
+Domain registration, hosting, renewal, premium assets, maintenance and additional custom functionality must be quoted separately.
+Clearly display "Terms & Conditions Apply".
+Do not promise unlimited revisions, unlimited hosting, free domains or lifetime support.
+FAQ Section
+Include:
+   * Is the website really available for ₹999?
+   * What is included in ₹999?
+   * Is domain registration included?
+   * Is hosting included?
+   * How long does development take?
+   * Can I use my own domain?
+   * Can I request changes?
+   * Do you provide maintenance?
+   * Can you redesign an existing website?
+   * Can you build custom websites?
+Final CTA
+Heading:
+"Ready to Take Your Business Online?"
+Description:
+"Your next customer could be searching for you online. Let's make sure they find you."
+Buttons:
+   * Start Your Website
+   * Contact Us
+Footer
+Include:
+   * SiteBanao branding
+   * Tagline
+   * Navigation links
+   * Services
+   * Contact details placeholders
+   * Social media placeholders
+   * Privacy Policy
+   * Terms & Conditions
+   * Copyright notice
+   4. ADDITIONAL PAGES
+Create the following dedicated pages.
+Services Page
+Explain website development, landing pages, business websites, portfolio websites, redesign services, website maintenance and custom development.
+Pricing Page
+Provide detailed package comparisons, inclusions, exclusions and additional service pricing.
+Portfolio Page
+Create an attractive filterable gallery:
+      * All
+      * Business
+      * Restaurant
+      * Healthcare
+      * Portfolio
+      * Real Estate
+      * Education
+How It Works Page
+Explain the complete customer journey from enquiry to final website delivery.
+About Us Page
+Present SiteBanao as a startup founded by three individuals with a shared vision of making professional websites accessible to everyone.
+Emphasize affordability, quality, transparency and customer satisfaction.
+Do not invent founder names, qualifications or company history.
+Contact Page
+Include:
+      * Customer enquiry form
+      * Name
+      * Business name
+      * Email
+      * Phone number
+      * Business category
+      * Required package
+      * Project description
+      * Preferred contact method
+Add WhatsApp contact integration.
+Use placeholders for contact information until actual details are provided.
+5. INTERACTIVE FEATURES
+Implement the following:
+Website Cost Calculator
+Allow customers to estimate their total cost.
+Options:
+      * Starter: ₹999
+      * Business: ₹2,999
+      * Professional: ₹5,999
+Additional selections:
+      * Domain registration
+      * Hosting
+      * Maintenance
+      * Additional pages
+      * Custom features
+Show the estimated total dynamically.
+Domain and hosting costs must be editable estimates, not fixed promises. Explain that final prices depend on the provider and selected plan.
+WhatsApp Integration
+Add a floating WhatsApp contact button.
+All enquiry CTA buttons should allow customers to initiate contact.
+Use a configurable WhatsApp number placeholder.
+Pre-fill enquiry messages with selected package details wherever appropriate.
+Enquiry Form
+Build a professional customer enquiry form with validation.
+After submission, show a confirmation message.
+Do not create a fake successful submission. Until a backend is connected, clearly indicate that the form is a demonstration or provide a configurable Google Forms/email integration.
+Responsive Design
+The website must work perfectly on:
+      * Desktop
+      * Laptop
+      * Tablet
+      * Android
+      * iPhone
+      6. TECHNICAL REQUIREMENTS
+Preferred technology:
+         * Next.js
+         * React
+         * TypeScript
+         * Tailwind CSS
+         * Lucide icons
+Use reusable components and maintain a clean folder structure.
+Requirements:
+         * SEO-friendly page structure
+         * Fast loading
+         * Optimized images
+         * Accessible navigation
+         * Semantic HTML
+         * Proper form validation
+         * Clean URLs
+         * Responsive layouts
+         * Reusable pricing components
+         * Consistent design system
+         * No unnecessary dependencies
+Do not introduce paid APIs, paid UI libraries or paid services.
+The initial website must be deployable using a suitable free hosting tier, subject to its commercial-use conditions and limitations.
+7. IMPORTANT BUSINESS RULES
+         1. ₹999 is the starting development price, not the complete cost of owning a website.
+
+         2. Domain and hosting are charged separately.
+
+         3. Final pricing depends on customer requirements.
+
+         4. Every package has a clearly defined scope.
+
+         5. Custom functionality is quoted separately.
+
+         6. Customers should retain ownership of their domain and hosting accounts.
+
+         7. Do not make false claims about customer numbers, experience, ratings or testimonials.
+
+         8. Do not display fabricated contact information.
+
+         9. Make terms and conditions easy to find.
+
+         10. Keep the customer journey simple and transparent.
+
+         11. CONVERSION OPTIMIZATION
+The website's primary objective is to convert visitors into paying customers.
+Prioritize:
+
+            * Strong hero messaging
+            * Clearly visible ₹999 starting price
+            * Prominent CTAs
+            * Attractive portfolio
+            * Transparent pricing
+            * Trust-building content
+            * Simple enquiry process
+            * WhatsApp accessibility
+Every page should guide visitors toward requesting a quotation or starting an order.
+9. FINAL DELIVERABLE
+Build the complete website, not just a design mockup or landing-page screenshot.
+Deliver:
+            * Complete source code
+            * All required pages
+            * Responsive UI
+            * Reusable components
+            * Functional navigation
+            * Pricing calculator
+            * Enquiry form
+            * WhatsApp integration with configurable number
+            * SEO metadata
+            * Setup instructions
+            * Deployment instructions
+            * README documentation
+Before completing the work, test the navigation, responsive layouts, buttons, calculator, forms and all internal links.
+The final result should look like a premium digital technology brand that customers can confidently trust.
+Final design philosophy:
+"Premium websites. Affordable pricing. No unnecessary complications."
+Brand: SiteBanao – Your Website. Just ₹999.
