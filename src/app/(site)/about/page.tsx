@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { BadgeIndianRupee, Eye, Gem, HeartHandshake, KeyRound, ReceiptText, ScrollText, Target, UserRound } from "lucide-react";
+import { BadgeIndianRupee, Eye, Gem, HeartHandshake, KeyRound, ReceiptText, ScrollText, Target } from "lucide-react";
 import { FinalCta } from "@/components/shared/FinalCta";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section, SectionHeading } from "@/components/ui/Section";
-import { aboutPhoto } from "@/data/photos";
+import { founderAlt, founders, teamPhoto } from "@/data/team";
 import { StaggerItem, StaggerList } from "@/components/motion/Reveal";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "SiteBanao is a startup founded by three individuals with a shared vision: making professional websites accessible to every business, starting at ₹999.",
+    "SiteBanao is a startup founded by six co-founders with a shared vision: making professional websites accessible to every business, starting at ₹999.",
   alternates: { canonical: "/about" },
 };
 
@@ -61,10 +61,15 @@ export default function AboutPage() {
       <Section labelledBy="story-title">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <SectionHeading id="story-title" align="left" eyebrow="Our story" title="Three founders. One shared vision." />
+            <SectionHeading
+              id="story-title"
+              align="left"
+              eyebrow="Our story"
+              title="Six founders. One shared vision."
+            />
             <div className="mt-6 space-y-4 text-[17px] leading-relaxed text-muted">
               <p>
-                SiteBanao was founded by three individuals who kept seeing the same problem: talented local businesses
+                SiteBanao was founded by six individuals who kept seeing the same problem: talented local businesses
                 (cafés, clinics, salons, tutors, shops) that customers simply couldn&apos;t find online.
               </p>
               <p>
@@ -82,38 +87,45 @@ export default function AboutPage() {
           </div>
 
           <div className="relative">
-            <div aria-hidden className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-brand-100 via-white to-accent-50 blur-2xl" />
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-lift">
-              <Image
-                src={aboutPhoto.src}
-                alt={aboutPhoto.alt}
-                fill
-                sizes="(min-width: 1024px) 580px, 90vw"
-                quality={75}
-                className="bg-[#e9ecf1] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6 pb-14 sm:p-8 sm:pb-16">
-                <ul className="flex -space-x-3" aria-label="Three co-founders">
-                  {["from-brand-700 to-brand-500", "from-[#7d6bff] to-brand-600", "from-accent-600 to-accent-500"].map(
-                    (g, i) => (
-                      <li
-                        key={g}
-                        className={`grid size-11 place-items-center rounded-full bg-gradient-to-br ${g} text-white ring-2 ring-white`}
-                      >
-                        <UserRound className="size-5" aria-hidden />
-                        <span className="sr-only">Co-founder {i + 1}</span>
-                      </li>
-                    ),
-                  )}
-                </ul>
-                <p className="mt-4 font-display text-2xl font-bold text-white">Built by founders who care</p>
-                <p className="mt-1 max-w-sm text-sm text-white/80">
-                  A small, focused team that personally works on every project, from the first conversation to launch
-                  day.
-                </p>
+            <div
+              aria-hidden
+              className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-brand-100 via-white to-accent-50 blur-2xl"
+            />
+            <figure className="overflow-hidden rounded-[2rem] bg-white shadow-lift ring-1 ring-line">
+              <div className="relative aspect-[3/2] bg-[#e9ecf1]">
+                <Image
+                  src={teamPhoto.src}
+                  alt={teamPhoto.alt}
+                  fill
+                  sizes="(min-width: 1024px) 580px, 90vw"
+                  className="object-cover"
+                />
               </div>
-            </div>
+              <figcaption className="flex items-center gap-4 p-5 pb-12 sm:p-6 sm:pb-14">
+                <ul className="flex shrink-0 -space-x-2.5" aria-label="The six co-founders">
+                  {founders.map((f, i) => (
+                    <li
+                      key={f.id}
+                      className="relative size-9 overflow-hidden rounded-full bg-[#e9ecf1] ring-2 ring-white sm:size-10"
+                    >
+                      <Image
+                        src={f.photo}
+                        alt={founderAlt(f, i)}
+                        fill
+                        sizes="40px"
+                        className="object-cover object-top"
+                      />
+                    </li>
+                  ))}
+                </ul>
+                <span className="min-w-0">
+                  <span className="block font-display text-lg font-bold text-ink">Six founders who care</span>
+                  <span className="block text-sm text-muted">
+                    A small, focused team that personally works on every project.
+                  </span>
+                </span>
+              </figcaption>
+            </figure>
             <div className="relative -mt-8 mx-4 grid grid-cols-3 gap-3 rounded-2xl bg-white p-3 text-center shadow-card ring-1 ring-line sm:mx-8">
               {[
                 ["₹999", "Starting price"],
@@ -130,7 +142,45 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section tone="surface" labelledBy="values-title">
+      <Section tone="surface" id="founders" labelledBy="founders-title">
+        <SectionHeading
+          id="founders-title"
+          eyebrow="Meet the founders"
+          title="The people behind SiteBanao"
+          description="Six co-founders who personally plan, design and build every website, and who you'll actually talk to."
+        />
+        <StaggerList className="mx-auto mt-14 grid max-w-5xl grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
+          {founders.map((f, i) => (
+            <StaggerItem key={f.id}>
+              <figure className="group h-full overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-line transition-shadow duration-300 hover:shadow-lift">
+                <div className="relative aspect-[4/5] overflow-hidden bg-[#e9ecf1]">
+                  <Image
+                    src={f.photo}
+                    alt={founderAlt(f, i)}
+                    fill
+                    sizes="(min-width: 1024px) 320px, 45vw"
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/35 to-transparent" />
+                </div>
+                <figcaption className="flex items-center justify-between gap-2 p-4 sm:p-5">
+                  <span className="min-w-0">
+                    <span className="block truncate font-display text-base font-bold text-ink sm:text-lg">
+                      {f.name ?? f.role}
+                    </span>
+                    <span className="block truncate text-sm text-muted">{f.name ? f.role : "SiteBanao"}</span>
+                  </span>
+                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-brand-50 text-xs font-bold text-brand-700 ring-1 ring-brand-100">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </figcaption>
+              </figure>
+            </StaggerItem>
+          ))}
+        </StaggerList>
+      </Section>
+
+      <Section labelledBy="values-title">
         <SectionHeading
           id="values-title"
           eyebrow="What we stand for"
@@ -139,7 +189,10 @@ export default function AboutPage() {
         />
         <StaggerList className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {values.map(({ icon: Icon, title, text }) => (
-            <StaggerItem key={title} className="rounded-2xl border border-line bg-white p-7 transition-shadow hover:shadow-card">
+            <StaggerItem
+              key={title}
+              className="rounded-2xl border border-line bg-white p-7 transition-shadow hover:shadow-card"
+            >
               <span className="grid size-12 place-items-center rounded-2xl bg-brand-50 text-brand-600 ring-1 ring-brand-100">
                 <Icon className="size-6" />
               </span>

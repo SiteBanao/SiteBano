@@ -97,8 +97,9 @@ All content lives in typed data files, so most edits never touch a component:
 | `src/data/process.ts` | 5-step process |
 | `src/data/faqs.ts` | FAQ questions and answers |
 | `src/data/photos.ts` | All photography (Unsplash IDs, alt text, gallery captions) |
+| `src/data/team.ts` | The six co-founders: names, roles and photos (`public/team/`) |
 
-**Before launch, please review:** typical timelines (`packages.ts`), add-on prices and calculator estimates (`addons.ts`), and the Terms / Privacy pages (starter templates that should be reviewed by a legal professional and updated with your registered business details).
+**Before launch, please add** each founder's name and role in `src/data/team.ts` (cards show "Co-founder" until then), **and review:** typical timelines (`packages.ts`), add-on prices and calculator estimates (`addons.ts`), and the Terms / Privacy pages (starter templates that should be reviewed by a legal professional and updated with your registered business details).
 
 ### Animations (Motion)
 

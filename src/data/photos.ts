@@ -202,8 +202,3 @@ export const servicePhotos: Record<string, Photo> = {
   "website-maintenance": p("1504868584819-f8e8b4b6d7e3", "Laptop showing website analytics"),
   "custom-development": p("1587691592099-24045742c181", "Developer pointing at code on a screen"),
 };
-
-export const aboutPhoto: Photo = p(
-  "1487338875411-8880f74114a2",
-  "A clean workspace with two monitors on a desk",
-);
