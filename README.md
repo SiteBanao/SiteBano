@@ -4,7 +4,7 @@ Production-ready marketing website for **SiteBanao**, a startup that builds affo
 
 > _Premium websites. Affordable pricing. No unnecessary complications._
 
-Built with **Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Lucide icons**. No paid APIs, UI kits or services.
+Built with **Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Motion · Lucide icons**. No paid APIs, UI kits or services.
 
 ---
 
@@ -21,7 +21,8 @@ Built with **Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v
 | **Portfolio** | Clearly labelled _demonstration_ designs for fictional businesses, with "View Live Demo" and "Get This Website" on each |
 | **SEO** | Per-page metadata, Open Graph image, JSON-LD (ProfessionalService + FAQPage), `sitemap.xml`, `robots.txt`, semantic HTML, canonical URLs |
 | **Accessibility** | Skip link, keyboard-friendly nav, native `<details>` FAQ, labelled form controls, `aria-live` totals, reduced-motion support |
-| **Performance** | Statically prerendered pages, zero raster images (mockups are pure HTML/CSS/SVG), self-hosted fonts via `next/font` |
+| **Visuals** | Realistic CSS MacBook Pro, iPad and iPhone mockups; real photography on every demo site, industry card and service |
+| **Performance** | Statically prerendered pages, responsive `next/image` photos resized by Unsplash's CDN (WebP/AVIF), self-hosted fonts via `next/font` |
 
 ### Honesty built in
 
@@ -95,12 +96,52 @@ All content lives in typed data files, so most edits never touch a component:
 | `src/data/services.ts` | Services page and "Why choose" items |
 | `src/data/process.ts` | 5-step process |
 | `src/data/faqs.ts` | FAQ questions and answers |
+| `src/data/photos.ts` | All photography (Unsplash IDs, alt text, gallery captions) |
+| `src/data/team.ts` | The six co-founders: names, roles and photos (`public/team/`) |
 
-**Before launch, please review:** typical timelines (`packages.ts`), add-on prices and calculator estimates (`addons.ts`), and the Terms / Privacy pages (starter templates that should be reviewed by a legal professional and updated with your registered business details).
+**Before launch, please add** each founder's name and role in `src/data/team.ts` (cards show "Co-founder" until then), **and review:** typical timelines (`packages.ts`), add-on prices and calculator estimates (`addons.ts`), and the Terms / Privacy pages (starter templates that should be reviewed by a legal professional and updated with your registered business details).
+
+### Animations (Motion)
+
+Animations use [Motion](https://motion.dev) (formerly Framer Motion), kept deliberately subtle:
+
+| Where | What |
+| --- | --- |
+| Section headings & card grids | Fade/rise into view once, with a gentle stagger (`Reveal`, `StaggerList`, `StaggerItem`) |
+| Hero devices | Entrance plus scroll parallax: the iPad and iPhone drift at different depths (`HeroLayer`) |
+| Portfolio filter | Cards glide to new positions; the active filter pill slides (layout animations) |
+| Mobile menu | Slides down, links cascade in (`AnimatePresence`) |
+| Process timeline | Connector line draws itself (`DrawLine`) |
+| Cost calculator | Total counts to the new value (`AnimatedINR`) |
+| WhatsApp button | Springs in after load (`PopIn`) |
+| FAQ | Smooth open/close with pure CSS (`::details-content`), no JavaScript |
+
+How it stays fast and safe:
+- `LazyMotion` + `m.*` components load only Motion's lighter `domAnimation` features. The larger layout feature set is lazy-loaded on the Portfolio page only.
+- All content is still server-rendered. A `<noscript>` rule shows everything if JavaScript is off.
+- `MotionConfig reducedMotion="user"` plus `useReducedMotion` respect the visitor's "reduce motion" setting.
+- Components live in `src/components/motion/`. Don't put Motion and CSS hover transforms on the same element, because Motion writes inline `transform`.
+
+### Photography
+
+All photos are free images from [Unsplash](https://unsplash.com), used under the [Unsplash License](https://unsplash.com/license) (free for commercial use, no attribution required). No Unsplash+ / premium images are used. Every photo is listed in `src/data/photos.ts`. To change one, replace its ID with the ID from any free Unsplash photo URL (`images.unsplash.com/photo-<id>`). To use your own photos, put them in `public/` and reference them as `/your-photo.jpg`.
+
+Photos are rendered with `next/image` through a custom loader (`src/lib/image-loader.ts`) that asks Unsplash's CDN for exactly the width each device needs, in modern formats. This works on any host, without a Next.js image server.
 
 ### Logo
 
 The logo mark (browser window, `</>`, swoosh and cursor) is redrawn as an SVG in `src/components/brand/Logo.tsx` and `src/app/icon.svg`, so it stays crisp and loads instantly. To use your original artwork instead, add it to `public/` and swap the `<LogoMark />` contents for a `next/image`.
+
+**Logo animation.** The two logo GIFs in the project root are used as follows:
+
+- *Dark neon version* (`SiteBanao Logo Animation Progression.gif`), enhanced into `public/brand/sitebanao-logo-intro.{webm,mp4}` with smooth 30 fps cross-dissolves, reduced gradient banding and a held final frame (about 120 KB, versus 250 KB for the looping GIF). It plays once in the footer when scrolled into view (`LogoReel`) and replays on hover. `sitebanao-logo-poster.webp` is the still shown before playback and to reduced-motion users.
+- *Transparent version* (`SiteBanao Logo Animation Frames.gif`) is recreated in code: the header and 404 logos run the same sequence (swoosh, window, `</>`, cursor click, sparks, wordmark) as sharp SVG with CSS keyframes (`.sb-animated` in `globals.css`), once per page load.
+
+To regenerate the video from an updated GIF (requires ffmpeg):
+
+```bash
+ffmpeg -i "SiteBanao Logo Animation Progression.gif" -vf "crop=508:336:0:0,format=yuv420p,framerate=fps=30:interp_start=48:interp_end=208:scene=100,deband=1thr=0.015:2thr=0.015:3thr=0.015:range=12:blur=1,tpad=stop_mode=clone:stop_duration=2.2" -c:v libx264 -preset slow -crf 20 -pix_fmt yuv420p -movflags +faststart -an public/brand/sitebanao-logo-intro.mp4
+```
 
 ---
 
@@ -126,7 +167,7 @@ src/
 │   ├── pricing/     # PricingCards, ComparisonTable, CostCalculator
 │   ├── portfolio/   # PortfolioCard, PortfolioGallery, DemoSite
 │   ├── contact/     # EnquiryForm
-│   ├── mockups/     # Device frames + MiniSite (scalable website previews)
+│   ├── mockups/     # Realistic MacBook / iPad / iPhone frames + MiniSite previews
 │   └── shared/      # PageHeader, FAQ, ProcessTimeline, FinalCta, LegalPage
 ├── config/site.ts
 ├── data/            # All editable content (see above)
